@@ -2,127 +2,113 @@
   "classes": [
     {
       "id": "1",
-      "name": "Leg Day Inferno",
-      "trainer": "Mike",
-      "time": "2025-12-10T18:00:00",
-      "description": "Destroy your legs in 45 minutes."
+      "name": "Morning Yoga",
+      "trainer": "Anna",
+      "time": "08:00",
+      "description": "Start your day with a relaxing yoga session to improve flexibility and focus."
     },
     {
       "id": "2",
-      "name": "Cardio Hell",
-      "trainer": "Sara",
-      "time": "2025-12-11T19:30:00",
-      "description": "High intensity interval training."
+      "name": "Crossfit Blast",
+      "trainer": "Mark",
+      "time": "10:30",
+      "description": "High-intensity functional training for strength and endurance."
     },
     {
       "id": "3",
-      "name": "Back & Biceps Pump",
+      "name": "Evening Zumba",
       "trainer": "Julia",
-      "time": "2025-12-12T17:00:00",
-      "description": "Classic pull day session."
+      "time": "19:00",
+      "description": "Dance-based cardio workout with latin music to burn calories and have fun."
     },
     {
       "id": "4",
-      "name": "Chest & Triceps Blast",
-      "trainer": "David",
-      "time": "2025-12-13T18:30:00",
-      "description": "Push workout focused on chest and triceps."
-    },
-    {
-      "id": "5",
-      "name": "Glutes & Core Burner",
-      "trainer": "Emma",
-      "time": "2025-12-14T09:00:00",
-      "description": "Glute isolation and brutal core finisher."
-    },
-    {
-      "id": "6",
-      "name": "Morning Mobility Flow",
+      "name": "Strength Fundamentals",
       "trainer": "Liam",
-      "time": "2025-12-15T07:30:00",
-      "description": "Full body mobility and stretching session."
-    },
-    {
-      "id": "7",
-      "name": "Heavy Strength Session",
-      "trainer": "Chris",
-      "time": "2025-12-16T20:00:00",
-      "description": "Low reps, heavy weights, full body strength."
-    },
-    {
-      "id": "8",
-      "name": "Full Body HIIT Madness",
-      "trainer": "Nina",
-      "time": "2025-12-17T18:15:00",
-      "description": "Short, intense intervals for maximum sweat."
-    },
-    {
-      "id": "9",
-      "name": "Boxing Conditioning",
-      "trainer": "Alex",
-      "time": "2025-12-18T19:00:00",
-      "description": "Pad work, footwork and conditioning rounds."
-    },
-    {
-      "id": "10",
-      "name": "Sunday Recovery Yoga",
-      "trainer": "Mia",
-      "time": "2025-12-19T10:30:00",
-      "description": "Gentle yoga session to recover from the week."
+      "time": "15:00",
+      "description": "Learn basic barbell movements with proper technique. Beginner friendly."
     }
   ],
 
   "bookings": [
     {
-      "id": "1",
+      "id": 1,
       "memberId": "1",
       "classId": "1",
-      "timestamp": "2025-12-01T10:00:00"
+      "timestamp": "1710000000000"
     },
     {
-      "id": "2",
+      "id": 2,
       "memberId": "1",
       "classId": "2",
-      "timestamp": "2025-12-02T10:30:00"
+      "timestamp": "1710003600000"
     },
     {
-      "id": "3",
+      "id": 3,
       "memberId": "2",
-      "classId": "1",
-      "timestamp": "2025-12-03T11:00:00"
+      "classId": "3",
+      "timestamp": "1710010000000"
     },
     {
-      "id": "4",
-      "memberId": "3",
+      "id": 4,
+      "memberId": "admin",
       "classId": "3",
-      "timestamp": "2025-12-04T09:00:00"
+      "timestamp": "1710017200000"
+    },
+    {
+      "id": 5,
+      "memberId": "victim",
+      "classId": "4",
+      "timestamp": "1710020000000"
     }
   ],
 
   "profiles": [
     {
-      "id": "1",
+      "id": 1,
       "memberId": "1",
-      "username": "john",
-      "fullName": "John Doe",
-      "email": "john@example.com",
-      "membershipTier": "Gold"
+      "username": "user1",
+      "fullName": "Regular User One",
+      "email": "user1@vulngym.local",
+      "membershipLevel": "Basic",
+      "notes": "Works out 2x per week."
     },
     {
-      "id": "2",
+      "id": 2,
       "memberId": "2",
-      "username": "alice",
-      "fullName": "Alice Smith",
-      "email": "alice@example.com",
-      "membershipTier": "Bronze"
+      "username": "user2",
+      "fullName": "Regular User Two",
+      "email": "user2@vulngym.local",
+      "membershipLevel": "Standard",
+      "notes": "Interested in HIIT classes."
     },
     {
-      "id": "3",
-      "memberId": "3",
-      "username": "bob",
-      "fullName": "Bob Stone",
-      "email": "bob@example.com",
-      "membershipTier": "Silver"
+      "id": 3,
+      "memberId": "admin",
+      "username": "admin",
+      "fullName": "Gym Administrator",
+      "email": "admin@vulngym.local",
+      "membershipLevel": "Admin",
+      "notes": "Has access to all internal data."
+    },
+    {
+      "id": 4,
+      "memberId": "victim",
+      "username": "victim",
+      "fullName": "Victim User",
+      "email": "victim@vulngym.local",
+      "membershipLevel": "Premium",
+      "notes": "Target profile for IDOR demo."
+    }
+  ],
+
+  "steal-contacts": [
+    {
+      "id": 1,
+      "name": "Template Contact",
+      "phone": "+32000000000",
+      "email": "template@example.com",
+      "note": "This entry just makes the collection exist so POST /steal-contacts works."
     }
   ]
 }
